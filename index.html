@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome Browser Video Tools – Free Video Tools That Run in Your Browser</title>
+<meta name="description" content="A curated list of free video tools that run in your web browser — no install, no desktop app, and (where marked) no upload. Compress, convert, transcribe, upscale, edit and more.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Awesome Browser Video Tools">
+<meta property="og:description" content="A curated list of free video tools that run in your web browser — no install, no desktop app, and (where marked) no upload.">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f7f9;
+    --text: #1d2330;
+    --muted: #5b6475;
+    --border: #e3e6eb;
+    --accent: #0b63ce;
+    --accent-soft: #e8f1fc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1216;
+      --surface: #171b21;
+      --text: #e6e9ee;
+      --muted: #9aa3b2;
+      --border: #262c35;
+      --accent: #6aa8ff;
+      --accent-soft: #16243a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 48px 16px 64px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+  h1 img { vertical-align: middle; height: 20px; margin-left: 6px; }
+  h2 {
+    font-size: 1.35rem; margin: 48px 0 14px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--border); scroll-margin-top: 16px;
+  }
+  .tagline {
+    font-size: 1.1rem; color: var(--muted); margin: 0 0 20px;
+    border-left: 3px solid var(--accent); padding-left: 14px;
+  }
+  .legend, .toc {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+  }
+  .legend h3, .toc h3 { margin: 0 0 8px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+  .legend ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+  .toc ul { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+  .toc li { break-inside: avoid; }
+  @media (max-width: 560px) { .toc ul { columns: 1; } }
+  ul.tools { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  ul.tools li {
+    border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px;
+    background: var(--bg);
+  }
+  ul.tools li:hover { border-color: var(--accent); }
+  .tool-name { font-weight: 600; }
+  .flags { margin-left: 4px; white-space: nowrap; }
+  .desc { display: block; color: var(--muted); font-size: 0.95rem; margin-top: 2px; }
+  .benefits li { margin-bottom: 6px; }
+  ol { padding-left: 22px; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.92rem; }
+  footer img { vertical-align: middle; margin-right: 8px; }
+  code { background: var(--surface); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header>
+  <h1>Awesome Browser Video Tools <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a></h1>
+  <p class="tagline">A curated list of free video tools that run in your web browser — no install, no desktop app, and (where marked) no upload.</p>
+  <p>Browsers can now decode and encode video natively through <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebCodecs_API">WebCodecs</a> and run full encoders like FFmpeg through WebAssembly. That means a growing number of tools can do real video work <strong>on your own device</strong> instead of sending your file to someone else's server. This list focuses on tools that are genuinely free to use, and flags which ones keep your file local.</p>
+</header>
+
+<section class="legend" aria-label="Legend">
+  <h3>Legend</h3>
+  <ul>
+    <li>🔒 Processes the file on your device — nothing is uploaded.</li>
+    <li>☁️ Uploads the file to a server for processing.</li>
+    <li>🧑‍💻 Open source.</li>
+    <li>👤 Requires an account for core features.</li>
+  </ul>
+</section>
+
+<nav class="toc" aria-label="Contents">
+  <h3>Contents</h3>
+  <ul>
+    <li><a href="#compress">Compress</a></li>
+    <li><a href="#convert-and-extract-audio">Convert and extract audio</a></li>
+    <li><a href="#transcribe-and-subtitle">Transcribe and subtitle</a></li>
+    <li><a href="#upscale-and-enhance">Upscale and enhance</a></li>
+    <li><a href="#trim-cut-and-edit">Trim, cut and edit</a></li>
+    <li><a href="#gifs-and-frames">GIFs and frames</a></li>
+    <li><a href="#screen-and-webcam-recording">Screen and webcam recording</a></li>
+    <li><a href="#players">Players</a></li>
+    <li><a href="#libraries-for-building-your-own">Libraries for building your own</a></li>
+    <li><a href="#why-local-processing-matters">Why local processing matters</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h2 id="compress">Compress</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://squishyfile.com/">SquishyFile Video Compressor</a> <span class="flags">🔒</span>
+      <span class="desc">Shrink MP4, MOV, MKV, AVI and WebM by quality level or to an exact target size (e.g. 10MB, 25MB). Uses WebCodecs for speed with an FFmpeg/WASM fallback for older formats. No file-size cap, no watermark, works in Safari on iPhone.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/8mb-video-compressor">SquishyFile 8MB Video Compressor</a> <span class="flags">🔒</span>
+      <span class="desc">Same engine with the target preset to 8MB, plus guidance on how long a clip can be at each resolution.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/discord-video-compressor">SquishyFile Discord Video Compressor</a> <span class="flags">🔒</span>
+      <span class="desc">Presets for Discord Free, Nitro Basic and Nitro upload limits.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="convert-and-extract-audio">Convert and extract audio</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://squishyfile.com/video-to-mp3">SquishyFile Video to MP3</a> <span class="flags">🔒</span>
+      <span class="desc">Pull the audio track out of almost any video file as MP3.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/mp4-to-mp3">SquishyFile MP4 to MP3</a> <span class="flags">🔒</span>
+      <span class="desc">Extract MP3 audio from MP4 files locally.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/mov-to-mp3">SquishyFile MOV to MP3</a> <span class="flags">🔒</span>
+      <span class="desc">Handy for iPhone recordings and Mac screen captures.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/mp4-to-wav">SquishyFile MP4 to WAV / OGG / M4A</a> <span class="flags">🔒</span>
+      <span class="desc">Lossless or alternative audio formats when MP3 isn't what you need.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/mp4-to-webm">SquishyFile MP4 to WebM</a> <span class="flags">🔒</span>
+      <span class="desc">Convert to WebM for web embedding.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="transcribe-and-subtitle">Transcribe and subtitle</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://squishyfile.com/video-to-text">SquishyFile Video to Text</a> <span class="flags">🔒</span>
+      <span class="desc">Turn speech in a video into a text transcript without uploading the file.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/mp4-to-transcript">SquishyFile MP4 to Transcript</a> <span class="flags">🔒</span>
+      <span class="desc">Transcript extraction tuned for MP4 recordings like meetings and lectures.</span></li>
+    <li><a class="tool-name" href="https://github.com/xenova/whisper-web">Whisper Web</a> <span class="flags">🔒 🧑‍💻</span>
+      <span class="desc">OpenAI's Whisper model running in the browser via Transformers.js. Great for tinkering and self-hosting.</span></li>
+    <li><a class="tool-name" href="https://www.nikse.dk/subtitleedit/online">Subtitle Edit Online</a>
+      <span class="desc">Browser version of the popular subtitle editor for timing and fixing SRT files.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="upscale-and-enhance">Upscale and enhance</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://squishyfile.com/video-upscaler">SquishyFile Video Upscaler</a> <span class="flags">🔒</span>
+      <span class="desc">Upscale low-resolution clips toward 1080p or 4K directly in the browser.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/video-filters">SquishyFile Video Filter</a> <span class="flags">🔒</span>
+      <span class="desc">Apply stylized effects (VHS, sketch and more) to a video locally.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="trim-cut-and-edit">Trim, cut and edit</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://github.com/omni-media/omniclip">Omniclip</a> <span class="flags">🔒 🧑‍💻</span>
+      <span class="desc">Open-source, timeline-based video editor that runs fully in the browser.</span></li>
+    <li><a class="tool-name" href="https://clipchamp.com/">Clipchamp</a> <span class="flags">👤</span>
+      <span class="desc">Microsoft's browser video editor with a solid free tier and templates.</span></li>
+    <li><a class="tool-name" href="https://www.kapwing.com/">Kapwing</a> <span class="flags">☁️ 👤</span>
+      <span class="desc">Collaborative online editor with auto-subtitles and resizing for social formats.</span></li>
+    <li><a class="tool-name" href="https://www.capcut.com/">CapCut Web</a> <span class="flags">☁️ 👤</span>
+      <span class="desc">Web version of CapCut with effects, captions and templates.</span></li>
+    <li><a class="tool-name" href="https://online-video-cutter.com/">Online Video Cutter</a> <span class="flags">☁️</span>
+      <span class="desc">Quick trim, crop and rotate for one-off jobs, no account needed.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="gifs-and-frames">GIFs and frames</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://squishyfile.com/mp4-to-gif">SquishyFile MP4 to GIF</a> <span class="flags">🔒</span>
+      <span class="desc">Turn a clip into a GIF without uploading it. Also available for <a href="https://squishyfile.com/mov-to-gif">MOV</a>.</span></li>
+    <li><a class="tool-name" href="https://squishyfile.com/frame-extractor">SquishyFile Frame Extractor</a> <span class="flags">🔒</span>
+      <span class="desc">Grab still frames from a video as images.</span></li>
+    <li><a class="tool-name" href="https://ezgif.com/video-to-gif">ezgif</a> <span class="flags">☁️</span>
+      <span class="desc">The long-running Swiss army knife for GIF creation, optimizing and editing.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="screen-and-webcam-recording">Screen and webcam recording</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://github.com/alyssaxuu/screenity">Screenity</a> <span class="flags">🔒 🧑‍💻</span>
+      <span class="desc">Privacy-friendly open-source screen recorder and annotation tool as a Chrome extension.</span></li>
+    <li><a class="tool-name" href="https://www.loom.com/">Loom</a> <span class="flags">☁️ 👤</span>
+      <span class="desc">Record screen and camera and share a link instantly. Free tier has length limits.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="players">Players</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://videojs.com/">Video.js</a> <span class="flags">🧑‍💻</span>
+      <span class="desc">The most widely used open-source HTML5 video player.</span></li>
+    <li><a class="tool-name" href="https://github.com/sampotts/plyr">Plyr</a> <span class="flags">🧑‍💻</span>
+      <span class="desc">Lightweight, accessible, customizable media player.</span></li>
+    <li><a class="tool-name" href="https://www.vidstack.io/">Vidstack</a> <span class="flags">🧑‍💻</span>
+      <span class="desc">Modern player components for React, Vue and web components.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="libraries-for-building-your-own">Libraries for building your own</h2>
+  <ul class="tools">
+    <li><a class="tool-name" href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpeg.wasm</a> <span class="flags">🧑‍💻</span>
+      <span class="desc">FFmpeg compiled to WebAssembly. Slower than native but handles nearly any format.</span></li>
+    <li><a class="tool-name" href="https://github.com/Vanilagy/mediabunny">Mediabunny</a> <span class="flags">🧑‍💻</span>
+      <span class="desc">Pure TypeScript library for reading, writing and converting media files using WebCodecs.</span></li>
+    <li><a class="tool-name" href="https://github.com/remotion-dev/remotion">Remotion</a> <span class="flags">🧑‍💻</span>
+      <span class="desc">Create videos programmatically with React.</span></li>
+    <li><a class="tool-name" href="https://github.com/huggingface/transformers.js">Transformers.js</a> <span class="flags">🧑‍💻</span>
+      <span class="desc">Run speech recognition and other ML models client-side.</span></li>
+    <li><a class="tool-name" href="https://developer.mozilla.org/en-US/docs/Web/API/WebCodecs_API">WebCodecs API (MDN)</a>
+      <span class="desc">Reference for the browser-native encode/decode API most modern tools are built on.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2 id="why-local-processing-matters">Why local processing matters</h2>
+  <p>Upload-based tools are convenient, but your file leaves your device, and free tiers often cap file size, add watermarks or require an account. Browser-local tools flip that trade-off:</p>
+  <ul class="benefits">
+    <li><strong>Privacy</strong> — personal videos, meeting recordings and client footage never touch a third-party server.</li>
+    <li><strong>No upload wait</strong> — a 2GB file doesn't need to cross your connection twice.</li>
+    <li><strong>No size caps</strong> — the limit is your own device's memory, not a pricing tier.</li>
+  </ul>
+  <p>The trade-off is speed: encoding happens on your hardware, so a large 4K file on an older phone will take a while. Keep the tab in the foreground while it works — browsers throttle background tabs.</p>
+</section>
+
+<section>
+  <h2 id="contributing">Contributing</h2>
+  <p>Suggestions welcome. Please open a pull request and make sure the tool:</p>
+  <ol>
+    <li>Runs in a web browser (extensions are fine).</li>
+    <li>Has a genuinely usable free tier.</li>
+    <li>Is correctly labeled 🔒 or ☁️ — if you're not sure whether it uploads, leave the label off.</li>
+  </ol>
+</section>
+
+<footer>
+  <h2 id="license" style="margin-top:0;border:0;font-size:1rem;">License</h2>
+  <p><a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://licensebuttons.net/p/zero/1.0/88x31.png" alt="CC0" width="88" height="31"></a>To the extent possible under law, the contributors have waived all copyright and related rights to this work.</p>
+</footer>
+
+</main>
+</body>
+</html>
